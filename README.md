@@ -65,3 +65,31 @@ To exit the virtual environment at any time, simply run:
 ```bash
 deactivate
 ```
+
+
+
+# Build model to be consider
+
+
+## Best Choices
+
+### 1 . Random Forest
+construct multible decision trees during training and outputs 
+- Accuracy 80-90 percentage
+- Robustness to overfitting makes it suitable for datasets with complex feature interactions and high dimensionality
+- Ideal for capturing the non-linear relationships between features such as transit times, costs, and distances due to its multiple tree structure.
+
+### 2. XGBoost 
+XGBoost( Extreme Gradint Boosting) is implementation of gradient boosting that improves on traditional boosting methods with regularization and tree pruning.
+- Accuracy : around 90% 
+- Well-suited for optimizing routes where precise prediction of delivery times and costs is essential, leveraging its ability to handle various types of data, including missing value.
+
+### 3. GBM (Gradient Boosting Machine)
+Construct decision trees sequentially , where each tree corrects error made by the previous ones
+- Accuracy : around 80-90%
+
+
+## Avoid 
+
+K-NN 
+Linear Regression
